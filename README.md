@@ -54,12 +54,54 @@ The simulation generates:
   - Delays experienced by customers at each stage.
 - Optional histograms for visualizing delays and queue sizes.
 
-## Usage
+# PreyPredator Simulation
 
-1. Clone the repository.
-2. Configure the input parameters in the script.
-3. Run the simulation:
-   ```bash
-   python SuperMarketModel.py
+This project implements a simulation model for studying population dynamics in a prey-predator ecosystem. The model uses stochastic events to represent reproduction, predation, and mortality, allowing analysis of population trends and interactions.
+
+## Features
+
+- **Event-driven Simulation**:
+  - Prey (herbivores) and predators (carnivores) dynamically interact through events such as reproduction, predation, and natural death.
+- **Population Tracking**:
+  - Separate counts for male and female populations of both species.
+- **Configurable Scenarios**:
+  - Simulation runs for a defined number of events or until populations are extinct.
+- **Statistical Analysis**:
+  - Confidence intervals calculated over multiple runs for key metrics.
+
+## How It Works
+
+### Key Events
+1. **Herbivorous Reproduction**:
+   - Male and female herbivores reproduce probabilistically, adding offspring to the population.
+2. **Carnivorous Reproduction**:
+   - Male and female carnivores reproduce similarly, contributing to predator numbers.
+3. **Predation**:
+   - Carnivores randomly hunt herbivores, reducing their population.
+4. **Natural Death**:
+   - Both species experience mortality due to competition or natural causes.
+
+### Simulation Modes
+- **Mode A**: Single simulation with default initial populations.
+- **Mode B**: Ten simulation runs, followed by confidence interval calculations for key metrics:
+  - Reproduction events.
+  - Predation events.
+  - Death events for both species.
+
+### Input Parameters
+- **Population Thresholds**:
+  - `herbivore_competition_threshold`: Maximum herbivore population before competition increases mortality.
+  - `carnivore_competition_threshold`: Predator-to-prey ratio beyond which carnivores experience additional mortality.
+- **Event Rates**:
+  - Initial rates for reproduction, predation, and mortality events.
+
+## Outputs
+
+- **Mode A**:
+  - Graph showing population dynamics over time for herbivores and carnivores.
+- **Mode B**:
+  - Confidence intervals for reproduction, predation, and death events.
+  - Bar chart summarizing confidence intervals for key metrics.
+
 
 
