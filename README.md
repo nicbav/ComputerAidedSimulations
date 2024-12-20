@@ -103,5 +103,58 @@ This project implements a simulation model for studying population dynamics in a
   - Confidence intervals for reproduction, predation, and death events.
   - Bar chart summarizing confidence intervals for key metrics.
 
+# GridMetro Simulation
+
+This project implements a simulation of a metro system designed as a grid network. The simulation models passenger flows, train operations, and station dynamics to analyze metro system efficiency and performance.
+
+## Features
+
+- **Event-driven Simulation**:
+  - Models passenger arrivals, train movements, and boarding/disembarking processes.
+- **Metro Grid Network**:
+  - Stations are arranged in a grid with six metro lines connecting various routes.
+- **Passenger Dynamics**:
+  - Simulates individual passenger journeys, including transfers between trains.
+- **Train Operations**:
+  - Tracks train delays, capacity, and onboard passenger numbers.
+- **Statistical Analysis**:
+  - Calculates confidence intervals and visualizes station and line usage.
+
+## How It Works
+
+### Key Components
+1. **Stations**:
+   - Handle passenger arrivals and manage waiting queues.
+2. **Trains**:
+   - Move along predefined paths with capacity constraints.
+3. **Passengers**:
+   - Follow shortest paths between random origin and destination stations, including potential transfers.
+
+### Simulation Details
+- **Event Types**:
+  - Passenger arrivals at stations.
+  - Train arrivals at stations.
+- **Delays**:
+  - Train delays are modeled based on boarding, disembarking, and random factors.
+- **Performance Metrics**:
+  - Average passenger numbers at stations.
+  - Average passengers onboard trains.
+  - Journey times for different paths.
+
+### Input Parameters
+- **Arrival Rate**:
+  - Frequency of passenger arrivals (`ARRIVAL`).
+- **Train Capacity**:
+  - Maximum number of passengers per train.
+
+### Simulation Output
+1. **Confidence Intervals**:
+   - Average number of passengers at each station.
+   - Average passengers on each metro line.
+2. **Path Analysis**:
+   - Average journey times for various station-to-station paths.
+3. **Visualizations**:
+   - Scatter plots of station and line usage across multiple simulation runs.
+
 
 
